@@ -26,6 +26,7 @@ var module = (function() {
         },
 
         send: function(transaction) {
+            console.log("send: " + JSON.stringify(transaction));
             return actions.invoke_app("__MAIN__", "api__klaytn_broadcast_send", {
                 "transaction": JSON.stringify(transaction)
             })

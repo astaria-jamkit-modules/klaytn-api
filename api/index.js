@@ -24,8 +24,8 @@ var module = (function() {
                 });
         },
 
-        send: function(method, params) {
-            return actions.invoke_app("__MAIN__", "api__klaytn_api_send", {
+        request: function(method, params) {
+            return actions.invoke_app("__MAIN__", "api__klaytn_api_request", {
                 "method": method,
                 "params": JSON.stringify(params)
             })
